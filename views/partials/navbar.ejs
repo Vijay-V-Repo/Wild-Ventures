@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+      <a class="navbar-brand float-md-left mb-0" href="#">&#9889;Wild<i>Ventures </i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+              <a  class="nav-link" href="/"><button type="button"class="btn " style="color:white">Home</button></a>
+              <a  class="nav-link" href="/campgrounds"><button type="button"class="btn" style="color:white">Campgrounds</button></a>
+              <a  class="nav-link" href="/campgrounds/new"><button type="button"class="btn" style="color:white">New Campground</button></a>
+          </div>
+          <div class="navbar-nav ml-auto" >
+              <% if(!currentUser) {%>
+              <a class="nav-link" href="/login"><button type="button"class="btn btn-success" style="color:white">Login</button></a>
+              <a class="nav-link" href="/register"><button type="button"class="btn btn-success" style="color:white">Register</button></a>
+              <% } else {%>
+              <a class="nav-link" href="/logout"><button type="button"class="btn btn-danger" style="color:white">Logout</button></a>
+              <% } %>
+          </div>
+      </div>
+  </div>
+</nav>
